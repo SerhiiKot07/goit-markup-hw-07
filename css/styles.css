@@ -119,7 +119,6 @@ img {
   background-color: #188ce8;
 }
 
-
 .button--right-icon {
   fill: currentColor;
 }
@@ -207,25 +206,6 @@ img {
   position: relative;
 }
 
-.header-nav__link--current {
-  color: var(--aсcent-text-color);
-}
-
-.link.header-nav__link--current::after {
-  content: '';
-  display: block;
-  width: 108%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--aсcent-text-color);
-  position: absolute;
-  left: 50%;
-  bottom: -2%;
-  transform: translateX(-50%) scaleX(1);
-  opacity: 1;
-  transition: transform var(--anim), opacity var(--anim);
-}
-
 .header-nav__link::after {
   content: '';
   display: block;
@@ -239,6 +219,25 @@ img {
   transform: translateX(-50%) scaleX(0.3);
   opacity: 0;
   transition: opacity var(--anim), scaleX var(--anim), transform var(--anim);
+}
+
+.header-nav__link--current {
+  color: var(--aсcent-text-color);
+}
+
+.header-nav__link--current::after {
+  content: '';
+  display: block;
+  width: 108%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--aсcent-text-color);
+  position: absolute;
+  left: 50%;
+  bottom: -2%;
+  transform: translateX(-50%) scaleX(1);
+  opacity: 1;
+  transition: transform var(--anim), opacity var(--anim);
 }
 
 .header-nav__link:hover::after,
@@ -344,7 +343,7 @@ img {
   padding: 40px;
 }
 
-.modal-form-title {
+.modal-form__title {
   display: block;
   font-weight: 700;
   font-size: 20px;
@@ -355,7 +354,7 @@ img {
   margin-bottom: 12px;
 }
 
-.modal-btn-close {
+.modal__btn-close {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -373,21 +372,21 @@ img {
   cursor: pointer;
 }
 
-.modal-icon-close {
+.modal__icon-close {
   fill: #000000;
   transition: fill var(--anim);
 }
 
-.modal-btn-close:hover .modal-icon-close,
-.modal-btn-close:focus .modal-icon-close {
+.modal__btn-close:hover .modal__icon-close,
+.modal__btn-close:focus .modal__icon-close {
   fill: var(--aсcent-text-color);
 }
 
-.modal-form-group {
+.modal-form__group {
   margin-bottom: 20px;
 }
 
-.modal-form-label {
+.modal-form__label {
   display: block;
   font-size: 12px;
   font-weight: 400;
@@ -396,12 +395,12 @@ img {
   margin-bottom: 4px;
 }
 
-.modal-form-wrapper {
+.modal-form__wrapper {
   position: relative;
   margin-bottom: 10px;
 }
 
-.modal-form-field {
+.modal-form__field {
   width: 100%;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -413,19 +412,19 @@ img {
   transition: outline var(--anim);
 }
 
-.modal-form-field:hover,
-.modal-form-field:focus {
+.modal-form__field:hover,
+.modal-form__field:focus {
   outline: 1px solid var(--aсcent-text-color);
 }
 
-.modal-form-field:not(:placeholder-shown):required:valid {
+.modal-form__field:not(:placeholder-shown):required:valid {
   outline: 1px solid green;
 }
-.modal-form-field:not(:placeholder-shown):required:invalid {
+.modal-form__field:not(:placeholder-shown):required:invalid {
   outline: 1px solid red;
 }
 
-.modal-form-icon {
+.modal-form__icon {
   position: absolute;
   top: 50%;
   left: 12px;
@@ -433,12 +432,12 @@ img {
   transition: fill var(--anim);
 }
 
-.modal-form-field:hover + .modal-form-icon,
-.modal-form-field:focus + .modal-form-icon {
+.modal-form__field:hover + .modal-form__icon,
+.modal-form__field:focus + .modal-form__icon {
   fill: var(--aсcent-text-color);
 }
 
-.modal-form-message {
+.modal-form__message {
   display: block;
   width: 100%;
   height: 120px;
@@ -453,19 +452,19 @@ img {
   transition: outline var(--anim);
 }
 
-.modal-form-message:hover,
-.modal-form-message:focus {
+.modal-form__message:hover,
+.modal-form__message:focus {
   outline: 1px solid var(--aсcent-text-color);
 }
 
-.modal-form-message::placeholder {
+.modal-form__message::placeholder {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 
-.modal-form-agreement {
+.modal-form__agreement {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -473,7 +472,7 @@ img {
   margin-bottom: 30px;
 }
 
-.modal-form-agreement-description {
+.modal-form__agreement-description {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--paragraf-text-color);
@@ -481,12 +480,12 @@ img {
   cursor: pointer;
 }
 
-.modal-form-agreement-link {
+.modal-form__agreement-link {
   color: var(--aсcent-text-color);
   text-underline-offset: 3px;
 }
 
-.modal-form-checkbox {
+.modal-form__checkbox {
   appearance: none;
   width: 16px;
   height: 15px;
@@ -500,13 +499,13 @@ img {
     background-size var(--anim);
 }
 
-.modal-form-checkbox:hover,
-.modal-form-checkbox:focus {
+.modal-form__checkbox:hover,
+.modal-form__checkbox:focus {
   border-color: var(--aсcent-text-color);
   cursor: pointer;
 }
 
-.modal-form-checkbox:checked {
+.modal-form__checkbox:checked {
   border-color: var(--aсcent-text-color);
   background-color: var(--aсcent-text-color);
   background-image: url("data:image/svg+xml,%3Csvg width='13' height='10' viewBox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.95703 4.75166L1.88825 4.68604L1.81923 4.75141L0.93123 5.59258L0.854858 5.66492L0.930974 5.73753L4.42671 9.07236L4.49574 9.1382L4.56476 9.07236L12.069 1.91352L12.1449 1.84116L12.069 1.76881L11.1873 0.927644L11.1183 0.861826L11.0493 0.927611L4.49577 7.17353L1.95703 4.75166Z' fill='white' stroke='white' stroke-width='0.2'/%3E%3C/svg%3E");
@@ -805,17 +804,17 @@ img {
   | Buttons
   |============================
 */
-.filters-btn {
+.portfolio-btn__list {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
 }
 
-.filters-btn .item:not(:last-child) {
+.portfolio-btn__item:not(:last-child) {
   margin-right: 8px;
 }
 
-.projects-list-btn {
+.portfolio-btn {
   font-family: inherit;
   background: #f5f4fa;
   border-radius: 4px;
@@ -830,8 +829,8 @@ img {
   transition: color var(--anim), background-color var(--anim),
     box-shadow var(--anim);
 }
-.projects-list-btn:hover,
-.projects-list-btn:focus {
+.portfolio-btn:hover,
+.portfolio-btn:focus {
   color: var(--secondary-text-color);
   background-color: #2196f3;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -844,7 +843,7 @@ img {
   |============================
 */
 
-.project-name {
+.project__name {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
@@ -853,7 +852,7 @@ img {
   margin-top: 0;
   margin-bottom: 4px;
 }
-.type-project {
+.project__type {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
@@ -862,36 +861,36 @@ img {
   margin: 0;
 }
 
-.project-list {
+.projects__list {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
 
-.project-card {
+.project__description {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
   border-top: none;
 }
 
-.card-set-link {
+.project__link {
   position: relative;
   overflow: hidden;
   transition: box-shadow var(--anim);
 }
 
-.card-set-link:hover,
-.card-set-link:focus {
+.project__link:hover,
+.project__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.card-set-box {
+.project__card-set-box {
   position: relative;
   overflow: hidden;
 }
 
-.overlay-projects {
+.project__overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -906,12 +905,12 @@ img {
   transition: transform var(--anim);
 }
 
-.project-item:hover .overlay-projects,
-.project-item:focus .overlay-projects {
+.projects__item:hover .project__overlay,
+.projects__item:focus .project__overlay {
   transform: translateY(0);
 }
 
-.overlay-projects-text {
+.project__overlay-text {
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
