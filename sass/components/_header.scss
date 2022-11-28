@@ -38,7 +38,7 @@
     bottom: -2%;
     transform: translateX(-50%) scaleX(0.3);
     opacity: 0;
-    transition: opacity $anim, scaleX $anim, transform $anim;
+    @include transition(opacity, scaleX, transform);
   }
 
   &:hover::after,
@@ -62,7 +62,7 @@
       bottom: -2%;
       transform: translateX(-50%) scaleX(1);
       opacity: 1;
-      transition: transform $anim, opacity $anim;
+      @include transition(transform, opacity);
     }
   }
 }

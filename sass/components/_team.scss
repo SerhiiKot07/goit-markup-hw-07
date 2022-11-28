@@ -1,8 +1,6 @@
 .section--team {
+  @extend %section;
   background-color: #f5f4fa;
-  font-size: 16px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
 }
 
 .team-list {
